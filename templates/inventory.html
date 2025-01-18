@@ -1,0 +1,58 @@
+{% extends 'layout.html' %} {% block title %} Inventory {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+<div class="book-events login">
+  <h1 class="book-events-h1 service-h1">Inventory</h1>
+  <div class="events-background"></div>
+  <div class="inventory-section">
+    <h1 class="inventory-h1">Inventory Manage</h1>
+    <button><a href="{{ url_for('orders') }}">Add to Inventory</a></button>
+    <table class="inventory-table fl-table">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Product Name</th>
+          <th>Quantity</th>
+          <th>Price Per Unit</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in inventory %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ item['product_name'] }}</td>
+          <td>{{ item['quantity'] }}</td>
+          <td>{{ item['price_per_unit'] }}</td>
+          <td>{{ item['description'] }}</td>
+          <td>
+            <form
+              method="POST"
+              action="{{ url_for('delete_inventory', inventory_id=item['id']) }}"
+            >
+              <button
+                type="submit"
+                class="btn btn-outline-danger btn-sm rounded-pill"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/x.png') }}"
+                  alt="x"
+                />
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'layout.html' %} {% block title %} Users {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+<div class="book-events login">
+  <h1 class="book-events-h1 service-h1">Users</h1>
+  <div class="events-background orders-background"></div>
+  <div class="inventory-section">
+    <h1 class="inventory-h1">Users Manage</h1>
+    <table class="inventory-table fl-table">
+      <thead class="table-light">
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Events Applied</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in accounts %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ user['full_name'] }}</td>
+          <td>{{ user['email'] }}</td>
+          <td>
+            <span
+              class="badge bg-{{ 'primary' if user['role'] == 'admin' else 'secondary' }} rounded-pill"
+            >
+              {{ user['role'] }}
+            </span>
+          </td>
+          <td>{{ user['events_applied'] or 'None' }}</td>
+
+          <td>
+            <form
+              method="POST"
+              action="{{ url_for('delete_user', user_id=user['user_id']) }}"
+            >
+              <button
+                type="submit"
+                class="btn btn-outline-danger btn-sm rounded-pill"
+              >
+                <img
+                  src="{{ url_for('static', filename='images/x.png') }}"
+                  alt="x"
+                />
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'layout.html' %} {% block title %} Book Event {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+<div class="book-events">
+  <h1 class="book-events-h1">Book Now</h1>
+  <div class="events-background book-event-backgorund"></div>
+  <h1 class="events-h1">Book Fyay Event</h1>
+  <div class="book-event-section">
+    <div class="event-section-first-column">
+      <p class="event-title">
+        <span>Event Name:</span>{{ event['event_name'] }}
+      </p>
+      <p class="event-description">
+        <span>Description:</span>{{ event['description'] }}
+      </p>
+      <p class="event-loaction"><span>Loction:</span>{{ event['location'] }}</p>
+      <p class="event-date"><span>Date:</span>{{ event['date'] }}</p>
+    </div>
+    <div class="event-section-form">
+      <form
+        class="event-form-div"
+        method="POST"
+        action="{{ url_for('book_event', event_id=event['id']) }}"
+      >
+        <div class="event-form event-form-username">
+          <label for="full_name" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="full_name"
+            name="full_name"
+            value="{{ session['user_name'] }}"
+            readonly
+          />
+        </div>
+        <div class="event-form event-form-email">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            value="{{ session['user_email'] }}"
+            readonly
+          />
+        </div>
+        <div class="event-form event-form-date">
+          <label for="date" class="form-label">Event Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+        <div class="event-form event-form-hours">
+          <label for="hours" class="form-label">Number of Hours</label>
+          <input
+            type="number"
+            class="form-control"
+            id="hours"
+            name="hours"
+            placeholder="Enter the number of hours you can participate"
+            required
+          />
+        </div>
+        <div class="event-form event-form-description">
+          <label for="description" class="form-label"
+            >Description (Optional)</label
+          >
+          <textarea
+            class="form-control"
+            id="description"
+            name="description"
+            rows="3"
+            placeholder="Additional information (optional)"
+          ></textarea>
+        </div>
+        <div class="event-form event-form-button">
+          <button type="submit" class="btn btn-primary">Apply</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

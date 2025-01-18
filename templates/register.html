@@ -1,0 +1,75 @@
+{% extends 'layout.html' %} {% block title %} Register {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+<div class="book-events login">
+  <h1 class="book-events-h1">Register</h1>
+  <div class="events-background"></div>
+  <div class="book-event-section login-section">
+    <div class="event-section-first-column login-paragraph-section">
+      <div class="login-paragraph">
+        <p>
+          Join us today to create and manage unforgettable events with ease.
+          Sign up and take the first step towards seamless event planning.
+        </p>
+      </div>
+    </div>
+    <div class="event-section-form login-form">
+      <form
+        class="event-form-div"
+        method="POST"
+        action="{{ url_for('register') }}"
+      >
+        <div class="event-form event-form-email">
+          <label for="email" class="form-label">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="full_name"
+            name="full_name"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="event-form event-form-email">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="event-form event-form-email">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div class="event-form event-form-button">
+          <button type="submit" class="btn btn-primary">Confirm</button>
+          <p class="form-question">
+            If you dont have account
+            <a href="{{ url_for('register') }}" class="text-primary fw-bold"
+              >click here</a
+            >.
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

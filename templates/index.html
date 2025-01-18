@@ -1,0 +1,400 @@
+{% extends 'layout.html' %} {% block title %} Event Organizer {% endblock %}
+{%block content %}
+<div class="main-container">
+  <!-- HERO SECTION -->
+  <div class="hero-container">
+    <h2 class="hero-container-head-line">
+      Effortless Event Solutions with Fyay
+    </h2>
+    <p class="hero-container-sub-line">
+      Simplify your events with seamless planning and management tools. 
+    </p>
+    <div class="div-btn hero-container-div-btn">
+      <a class="hero-container-a btn" href="{{ url_for('service') }}"
+        >Book a Event</a
+      >
+    </div>
+  </div>
+  <!-- SERVICE SECTION -->
+  <div class="service-container anmation-block">
+    <div class="service-container-first-row ">
+      <h2 class="service-container-first-row-headline">
+        Explore What's Possible with Fyay
+      </h2>
+      <p class="service-conatiner-first-row-subline">
+        Streamlined solutions crafted for corporate events to ensure flawless
+        planning, execution, and client satisfaction. 
+      </p>
+    </div>
+    <div class="service-container-second-row anmation-block">
+      <div class="service-container-second-row-cards anmation-block">
+        <div class="service-container-second-row-cards-first-row">
+          <p class="service-container-second-row-cards-first-row-icon">🎟️</p>
+          <p
+            class="service-container-second-row-cards-first-row-index indexing"
+          >
+            001
+          </p>
+        </div>
+        <h4 class="service-container-second-row-cards-second-row-h4">
+          Tailored Event Solutions
+        </h4>
+        <p class="service-container-second-row-cards-third-row-paragraph">
+          Create exceptional corporate events designed to meet your clients'
+          needs. From concept to execution, we provide the tools to make every
+          event unique and memorable. ✨
+        </p>
+        <a
+          class="service-container-second-row-cards-third-row-button"
+          href="{{ url_for('service') }}"
+          >Learn More</a
+        >
+      </div>
+      <div class="service-container-second-row-cards anmation-block">
+        <div class="service-container-second-row-cards-first-row">
+          <p class="service-container-second-row-cards-first-row-icon">🤝</p>
+          <p
+            class="service-container-second-row-cards-first-row-index indexing"
+          >
+            002
+          </p>
+        </div>
+        <h4 class="service-container-second-row-cards-second-row-h4">
+          Seamless Client Collaboration
+        </h4>
+        <p class="service-container-second-row-cards-third-row-paragraph">
+          Elevate client experiences with intuitive tools and clear
+          communication. Strengthen partnerships by involving clients in the
+          process and keeping them informed every step of the way. 🎯
+        </p>
+        <a
+          class="service-container-second-row-cards-third-row-button"
+          href="{{ url_for('service') }}"
+          >Learn More</a
+        >
+      </div>
+      <div class="service-container-second-row-cards anmation-block">
+        <div class="service-container-second-row-cards-first-row">
+          <p class="service-container-second-row-cards-first-row-icon">💻</p>
+          <p
+            class="service-container-second-row-cards-first-row-index indexing"
+          >
+            003
+          </p>
+        </div>
+        <h4 class="service-container-second-row-cards-second-row-h4">
+          Smart Resource Management
+        </h4>
+        <p class="service-container-second-row-cards-third-row-paragraph">
+          Optimize resource allocation and inventory for every event. Keep track
+          of supplies, manage costs, and ensure nothing is overlooked to deliver
+          a seamless experience. 〽️
+        </p>
+        <a
+          class="service-container-second-row-cards-third-row-button"
+          href="{{ url_for('service') }}"
+          >Learn More</a
+        >
+      </div>
+    </div>
+  </div>
+  <!-- SEC-SERVICE SECTION -->
+  <div class="sec-service-container ">
+    <div class="sec-service-container-first-row">
+      <h2 class="sec-service-container-first-row-headline">
+        Built-in Expertise for Memorable Events
+      </h2>
+      <p class="sec-service-conatiner-first-row-subline">
+        Fyay specializes in crafting unique corporate events that leave lasting
+        impressions.
+      </p>
+    </div>
+    <div class="sec-service-container-second-row-cards anmation-block">
+      <div class="sec-service-container-second-row-cards-first-column">
+        <p
+          class="sec-service-container-second-row-cards-first-column-index indexing"
+        >
+          001
+        </p>
+        <h3 class="sec-service-container-second-row-cards-first-column-h3">
+          Conferences and Seminars
+        </h3>
+        <p
+          class="sec-service-container-second-row-cards-first-column-paragraph"
+        >
+          Professional and seamless events tailored for knowledge-sharing and
+          networking opportunities.
+        </p>
+        <a
+          class="sec-service-container-second-row-cards-first-column-a btn"
+          href="{{ url_for('service') }}"
+          >Our Service</a
+        >
+      </div>
+      <div class="sec-service-container-second-row-cards-second-column">
+        <img
+          class="sec-service-container-second-row-cards-second-column-img img"
+          src="/static/images/image0.png"
+          alt="Conferences and Seminars"
+        />
+      </div>
+    </div>
+    <div class="sec-service-container-second-row-cards anmation-block">
+      <div class="sec-service-container-second-row-cards-first-column">
+        <p
+          class="sec-service-container-second-row-cards-first-column-index indexing"
+        >
+          002
+        </p>
+        <h3 class="sec-service-container-second-row-cards-first-column-h3">
+          Corporate Celebrations
+        </h3>
+        <p
+          class="sec-service-container-second-row-cards-first-column-paragraph"
+        >
+          Celebrate achievements with well-planned, memorable corporate parties.
+        </p>
+        <a
+          class="sec-service-container-second-row-cards-first-column-a btn"
+          href="{{ url_for('service') }}"
+          >Our Service</a
+        >
+      </div>
+      <div class="sec-service-container-second-row-cards-second-column">
+        <img
+          class="sec-service-container-second-row-cards-second-column-img img"
+          src="/static/images/image1.png"
+          alt="Corporate Celebrations"
+        />
+      </div>
+    </div>
+    <div class="sec-service-container-second-row-cards anmation-block">
+      <div class="sec-service-container-second-row-cards-first-column">
+        <p
+          class="sec-service-container-second-row-cards-first-column-index indexing"
+        >
+          003
+        </p>
+        <h3 class="sec-service-container-second-row-cards-first-column-h3">
+          Product Launches
+        </h3>
+        <p
+          class="sec-service-container-second-row-cards-first-column-paragraph"
+        >
+          Create impactful launches that captivate audiences and highlight your
+          brand.
+        </p>
+        <a
+          class="sec-service-container-second-row-cards-first-column-a btn"
+          href="{{ url_for('service') }}"
+          >Our Service</a
+        >
+      </div>
+      <div class="sec-service-container-second-row-cards-second-column">
+        <img
+          class="sec-service-container-second-row-cards-second-column-img img"
+          src="/static/images/image2.png"
+          alt="Product Launches"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- REVIEWS AND PARTNERS SECTION -->
+  <div class="reviews-container anmation-block">
+    <h2 class="reviews-container-h2">What Customers say about us</h2>
+    <div class="scroller">
+      <div class="review-section scroller-inner">
+        <!-- REVIEW -->
+        <div class="review">
+          <div class="rating">
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star" style="color: #dbba57"></i>
+          </div>
+          <p class="reviews-container-review-paragraph">
+            Fyay turned our corporate seminar into a seamless, engaging
+            experience. We couldnt have asked for better support.
+          </p>
+          <div class="reviews-container-user">
+            <img
+              class="reviews-container-user-img"
+              src="{{ url_for('static', filename='images/image4.png') }}"
+              alt="user-img"
+            />
+            <p class="reviews-container-user-name">Karrar Esbeyajani</p>
+          </div>
+        </div>
+        <!-- REVIEW -->
+        <div class="review " >
+          <div class="rating">
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star" style="color: #dbba57"></i>
+          </div>
+          <p class="reviews-container-review-paragraph">
+            From planning to execution, Fyay ensured our product launch was a
+            resounding success.
+          </p>
+          <div class="reviews-container-user">
+            <img
+              class="reviews-container-user-img"
+              src="{{ url_for('static', filename='images/image4.png') }}"
+              alt="user-img"
+            />
+            <p class="reviews-container-user-name">Karrar Esbeyajani</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroller">
+      <div class="review-section scroller-inner v2">
+        <!-- REVIEW -->
+        <div class="review">
+          <div class="rating">
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star" style="color: #dbba57"></i>
+          </div>
+          <p class="reviews-container-review-paragraph">
+            From planning to execution, Fyay ensured our product launch was a
+            resounding success.
+          </p>
+          <div class="reviews-container-user">
+            <img
+              class="reviews-container-user-img"
+              src="{{ url_for('static', filename='images/image4.png') }}"
+              alt="user-img"
+            />
+            <p class="reviews-container-user-name">Karrar Esbeyajani</p>
+          </div>
+        </div>
+        <!-- REVIEW -->
+        <div class="review">
+          <div class="rating">
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star-fill" style="color: #ffc107"></i>
+            <i class="bi bi-star" style="color: #dbba57"></i>
+          </div>
+          <p class="reviews-container-review-paragraph">
+            Fyay turned our corporate seminar into a seamless, engaging
+            experience. We couldnt have asked for better support.
+          </p>
+          <div class="reviews-container-user">
+            <img
+              class="reviews-container-user-img"
+              src="{{ url_for('static', filename='images/image4.png') }}"
+              alt="user-img"
+            />
+            <p class="reviews-container-user-name">Karrar Esbeyajani</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Question section -->
+  <div class="question-container">
+    <div class="question-container-first-column">
+      <h2 class="question-container-first-column-h2">
+        Frequently Asked Questions
+      </h2>
+      <p class="question-container-first-column-paragraph">
+        Simplifying corporate events with streamlined planning and execution.
+      </p>
+      <a
+        class="question-container-first-column-a"
+        href="{{ url_for('contact') }}"
+        >Contact us</a
+      >
+    </div>
+    <div class="question-container-second-column">
+      <div class="question-container-second-column-question question-card">
+        <div
+          class="question-container-second-column-question question-card-first-row"
+        >
+          <p class="question-container-second-column-question-index indexing">
+            001
+          </p>
+          <p class="question-container-second-column-question-paragraph">
+            What services does Fyay provide?
+          </p>
+          <span class="question-container-second-column-question-icon">+</span>
+        </div>
+        <p
+          class="question-container-second-column-question question-card-second-row"
+        >
+          Fyay offers end-to-end corporate event management services, including
+          planning, attendee coordination, inventory management, and on-site
+          support.
+        </p>
+      </div>
+      <div class="question-container-second-column-question question-card">
+        <div
+          class="question-container-second-column-question question-card-first-row"
+        >
+          <p class="question-container-second-column-question-index indexing">
+            002
+          </p>
+          <p class="question-container-second-column-question-paragraph">
+            How does Fyay ensure a seamless event?
+          </p>
+          <span class="question-container-second-column-question-icon">+</span>
+        </div>
+        <p
+          class="question-container-second-column-question question-card-second-row"
+        >
+          We use advanced tools to manage logistics, allocate resources
+          efficiently, and provide real-time updates to ensure everything runs
+          smoothly.
+        </p>
+      </div>
+      <div class="question-container-second-column-question question-card">
+        <div
+          class="question-container-second-column-question question-card-first-row"
+        >
+          <p class="question-container-second-column-question-index indexing">
+            003
+          </p>
+          <p class="question-container-second-column-question-paragraph">
+            Can Fyay handle last-minute changes?
+          </p>
+          <span class="question-container-second-column-question-icon">+</span>
+        </div>
+        <p
+          class="question-container-second-column-question question-card-second-row"
+        >
+          Absolutely. Our flexible planning tools allow for quick adjustments,
+          ensuring your event stays on track even with unexpected changes.
+        </p>
+      </div>
+      <div class="question-container-second-column-question question-card">
+        <div
+          class="question-container-second-column-question question-card-first-row"
+        >
+          <p class="question-container-second-column-question-index indexing">
+            004
+          </p>
+          <p class="question-container-second-column-question-paragraph">
+            Is Fyay suitable for all types of corporate events?
+          </p>
+          <span class="question-container-second-column-question-icon">+</span>
+        </div>
+        <p
+          class="question-container-second-column-question question-card-second-row"
+        >
+          Yes, whether it's a conference, product launch, or team celebration,
+          Fyay is designed to adapt to your event's unique requirements.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock content %}

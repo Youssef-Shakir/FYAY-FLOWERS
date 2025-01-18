@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}{% block title %} Dashboard {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+<div class="book-events login">
+  <h1 class="book-events-h1 service-h1">Dashboard</h1>
+  <div class="events-background background-dashborad"></div>
+  <div class="dashboard">
+    <div class="dashboard-cards">
+      <div class="dashboard-card">
+        <a href="{{ url_for('inventory') }}"
+          ><span>
+            <img
+              src="{{ url_for('static', filename='images/inventory.png') }}"
+              alt="inventory"
+            />
+          </span>
+          <h4>Inventory</h4></a
+        >
+      </div>
+      <div class="dashboard-card">
+        <a href="{{ url_for('orders') }}"
+          ><span>
+            <img
+              src="{{ url_for('static', filename='images/sales.png') }}"
+              alt="Orders"
+            />
+          </span>
+          <h4>Orders</h4></a
+        >
+      </div>
+      <div class="dashboard-card">
+        <a href="{{ url_for('users') }}"
+          ><span>
+            <img
+              src="{{ url_for('static', filename='images/crm.png') }}"
+              alt="users"
+            />
+          </span>
+          <h4>Users</h4></a
+        >
+      </div>
+      <div class="dashboard-card">
+        <a href="{{ url_for('manage_events') }}"
+          ><span>
+            <img
+              src="{{ url_for('static', filename='images/accounting.png') }}"
+              alt="Events"
+            />
+          </span>
+          <h4>Events</h4></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

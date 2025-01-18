@@ -1,0 +1,102 @@
+{% extends 'layout.html' %} {% block title %} Service {% endblock %} {% block
+content %}
+<style>
+  .reviews-background {
+    display: none;
+  }
+  .section-background {
+    display: none;
+  }
+</style>
+
+<div class="service ">
+  <h1 class="service-h1">Our Service</h1>
+  <div class="service-events-background background ">
+    <div class="service-events-container">
+      <div class="service-events">
+        <div class="events-first-row">
+          <h1>Fyay Events</h1>
+          <p>
+            We specialize in crafting impactful events for companies and
+            organizations, ensuring seamless execution and unforgettable
+            experiences.
+          </p>
+        </div>
+        <div class="events-second-row">
+          <div class="events-cards anmation-block">
+            <img
+              src="{{ url_for('static', filename='images/image5.jpg') }}"
+              alt=""
+            />
+            <h4>Annual Corporate Summit</h4>
+            <p>
+              Connect industry leaders and innovators for insights and
+              networking.
+            </p>
+            <a class="events-btn" href="{{ url_for('events') }}">Book Now</a>
+          </div>
+          <div class="events-cards anmation-block">
+            <img
+              src="{{ url_for('static', filename='images/image6.jpg') }}"
+              alt=""
+            />
+            <h4>Product Launch Gala</h4>
+            <p>Showcase your product with an unforgettable launch event.</p>
+            <a class="events-btn" href="{{ url_for('events') }}">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="service-birthdays">
+    <div class="events-first-row birthday-first-row">
+      <h1>Fyay Party and Birthday</h1>
+      <p>
+        Unforgettable parties and birthdays, tailored to your style and needs,
+        with flawless execution.
+      </p>
+    </div>
+    <div class="events-second-row">
+      <div class="events-cards birthday-card anmation-block">
+        <img
+          src="{{ url_for('static', filename='images/image7.jpg') }}"
+          alt=""
+        />
+        <h4>Themed Kids' Party</h4>
+        <p>
+          Bring kids’ dreams to life with creative themes and fun-filled
+          activities.
+        </p>
+        <a class="events-btn" href="{{ url_for('events') }}">Book Now</a>
+      </div>
+      <div class="events-cards birthday-card anmation-block">
+        <img
+          src="{{ url_for('static', filename='images/image8.png') }}"
+          alt=""
+        />
+        <h4>Grand Party Extravaganza</h4>
+        <p>
+          Host a stunning party with vibrant decor, entertainment, and seamless
+          planning.
+        </p>
+        <a class="events-btn" href="{{ url_for('events') }}">Book Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="custom-orders-background background anmation-block">
+    <div class="custom-orders-container">
+      <div class="custom-orders">
+        <h1>Custom Orders</h1>
+        <p>
+          Have a unique vision for your event? Contact us to create a fully
+          customized experience tailored to your needs.
+        </p>
+        <a href="{{ url_for('contact') }}">Contact us</a>
+      </div>
+    </div>
+
+    <div class="footer-background"></div>
+  </div>
+</div>
+
+{% endblock %}
